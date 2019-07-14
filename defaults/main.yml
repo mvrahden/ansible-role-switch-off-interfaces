@@ -1,0 +1,2 @@
+---
+interfaces_os_distro: "{{ ansible_facts['lsb']['id'] | lower }}"

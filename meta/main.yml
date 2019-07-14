@@ -1,0 +1,34 @@
+galaxy_info:
+  author: Menno van Rahden
+  role_name: switch-off-interfaces
+  description: >
+    An Ansible role to switch off unnecessary interfaces such as HDMI, Bluetooth, Wifi and Audio.
+
+  license: MIT
+
+  min_ansible_version: 2.2
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Raspbian
+      versions:
+        - all
+
+  galaxy_tags:
+    - interfaces
+    - hdmi
+    - audio
+    - bluetooth
+    - wifi
+    - debian
+    - ubuntu
+    - raspbian
+    - raspberry
+    - raspberrypi
+
+dependencies: []

@@ -1,0 +1,23 @@
+{{ ansible_managed | comment }}
+# For more options and information see
+# http://rpf.io/configtxt
+# https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README
+# Some settings may impact device functionality.
+
+arm_freq_min=250
+core_freq_min=100
+sdram_freq_min=150
+over_voltage_min=0
+
+dtparam=i2c=off
+dtparam=i2s=off
+dtparam=spi=off
+
+dtoverlay=pi3-disable-wifi
+dtoverlay=pi3-disable-bt
+
+dtparam=audio=off
+start_x=0
+enable_uart=0
+
+gpu_mem=16

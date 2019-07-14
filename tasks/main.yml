@@ -1,0 +1,22 @@
+---
+- name: Determine if HDMI services exist
+  stat: 
+    # Raspian only
+    path: /opt/vc/bin/tvservice
+  register: _uses_tvservice
+  ignore_errors: true
+
+- debug:
+    var: _uses_tvservice['stat']
+
+- name: Switch off HDMI
+  shell: /opt/vc/bin/tvservice -o
+  when: _uses_tvservice['stat']['exists']
+  ignore_errors: true
+
+- name: Load config.txt for Raspberry Pis
+  template:
+    src: config.txt.j2
+    dest: /boot/config.txt
+  become: true
+  when: interfaces_os_distro == 'raspbian'
