@@ -15,9 +15,6 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
-    - name: Raspbian
-      versions:
-        - all
 
   galaxy_tags:
     - interfaces
