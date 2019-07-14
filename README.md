@@ -1,4 +1,4 @@
-# ansible-role-ssh <!-- omit in toc -->
+# ansible-role-switch-off-interfaces <!-- omit in toc -->
 
 An [Ansible](https://www.ansible.com) role to switch off unnecessary interfaces such as HDMI, Bluetooth, Wifi and Audio (currently Raspbian only).
 
