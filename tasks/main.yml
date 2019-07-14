@@ -6,13 +6,17 @@
   register: _uses_tvservice
   ignore_errors: true
 
-- debug:
-    var: _uses_tvservice['stat']
+- name: Show tvservice status
+  debug:
+    msg: "HDMI exists: {{ _uses_tvservice['stat']['exists'] }}"
 
 - name: Switch off HDMI
   shell: /opt/vc/bin/tvservice -o
   when: _uses_tvservice['stat']['exists']
   ignore_errors: true
+  register: _tvservice_output
+  changed_when: false
+  failed_when: _tvservice_output['stderr'] != ''
 
 - name: Load config.txt for Raspberry Pis
   template:
