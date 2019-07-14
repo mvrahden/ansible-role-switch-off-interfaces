@@ -16,7 +16,7 @@
   ignore_errors: true
   register: _tvservice_output
   changed_when: false
-  failed_when: _tvservice_output['stderr'] != ''
+  failed_when: _tvservice_output['stderr']
 
 - name: Load config.txt for Raspberry Pis
   template:
