@@ -1,6 +1,6 @@
 galaxy_info:
   author: Menno van Rahden
-  role_name: switch-off-interfaces
+  role_name: switch_off_interfaces
   description: >
     An Ansible role to switch off unnecessary interfaces such as HDMI, Bluetooth, Wifi and Audio.
 
